@@ -30,6 +30,8 @@ echo "Use ${APP_NAME} as project name."
 
 cd "${BUILD_DIR}"
 
+git remote -v
+
 echo "Start check if project is affected."
 echo "${BUILD_DIR}/npm install"
 npm install
