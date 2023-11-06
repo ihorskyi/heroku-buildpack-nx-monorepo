@@ -35,9 +35,9 @@ echo "${BUILD_DIR}/npm install"
 npm install
 
 echo "Check if project ${APP_NAME} is affected."
-echo "${BUILD_DIR}/node node_modules/.bin/nx nx affected --verbose --base=origin/main~1 --exclude="*,!${APP_NAME}" -t build --nxBail --skipNxCache"
+echo "${BUILD_DIR}/node node_modules/.bin/nx affected --verbose --base=origin/main~1 --exclude="*,!${APP_NAME}" -t build --nxBail --skipNxCache"
 
-AFFECTED=$(node node_modules/.bin/nx nx affected --verbose --base=origin/main~1 --exclude="*,!${APP_NAME}" -t build --nxBail --skipNxCache)
+AFFECTED=$(node node_modules/.bin/nx affected --verbose --base=origin/main~1 --exclude="*,!${APP_NAME}" -t build --nxBail --skipNxCache)
 
 if [ "$AFFECTED" != "" && [ $AFFECTED == *"${APP_NAME}"* ] ]; then
   echo "Project ${APP_NAME} is affected so the built will start now."
