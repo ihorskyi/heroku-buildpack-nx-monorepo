@@ -28,10 +28,14 @@ fi
 APP_NAME=$(cat "${ENV_DIR}/APP_NAME")
 echo "Use ${APP_NAME} as project name."
 
-cd "${ENV_DIR}"
+cd /
 
 PWD=$(pwd)
 echo "$PWD"
+
+GIT_DIRS=$(find . -type d | grep -e '.git$')
+echo "$GIT_DIRS"
+
 
 LS=$(ls -lah)
 echo "$LS"
