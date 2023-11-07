@@ -28,6 +28,8 @@ fi
 APP_NAME=$(cat "${ENV_DIR}/APP_NAME")
 echo "Use ${APP_NAME} as project name."
 
+cd "${ENV_DIR}"
+
 PWD=$(pwd)
 echo "$PWD"
 
